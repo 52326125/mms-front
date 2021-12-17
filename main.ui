@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MMS</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pushButton_map">
+      <property name="text">
+       <string>載入地圖設定</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QScrollArea" name="scrollArea_sup">
+      <property name="minimumSize">
+       <size>
+        <width>230</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>600000</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>374</width>
+         <height>48</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QTextEdit" name="log"/>
+    </item>
+    <item row="7" column="0">
+     <widget class="QPushButton" name="pushButton_start">
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>啟動</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_sup">
+        <property name="text">
+         <string>輔助技能：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_sup_add">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>增加技能位</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="checkBox_movable">
+        <property name="text">
+         <string>移動中使用</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_move">
+        <property name="text">
+         <string>移動技能：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_move">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>66</width>
+          <height>87</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_atk">
+        <property name="text">
+         <string>主攻技能：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_atk">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_job">
+        <property name="text">
+         <string>職業：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_job">
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="currentText">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="1" rowspan="4">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>250</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>250</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_skill_1">
+       <attribute name="title">
+        <string>Ⅰ</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout_skill_1"/>
+      </widget>
+      <widget class="QWidget" name="tab_skill_2">
+       <attribute name="title">
+        <string>Ⅱ</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout_skill_2"/>
+      </widget>
+      <widget class="QWidget" name="tab_skill_3">
+       <attribute name="title">
+        <string>Ⅲ</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout_skill_3"/>
+      </widget>
+      <widget class="QWidget" name="tab_skill_4">
+       <attribute name="title">
+        <string>Ⅳ</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout_skill_4"/>
+      </widget>
+      <widget class="QWidget" name="tab_skill_hyper">
+       <attribute name="title">
+        <string>Hyper</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout_skill_hyper"/>
+      </widget>
+      <widget class="QWidget" name="tab_skill_5">
+       <attribute name="title">
+        <string>Ⅴ</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout_skill_6"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
