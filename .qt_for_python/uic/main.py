@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\main.ui'
+# Form implementation generated from reading ui file 'e:\mms-font\main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -161,13 +161,3 @@ class Ui_MainWindow(object):
         self.label_move.setText(_translate("MainWindow", "移動技能："))
         self.label_sup.setText(_translate("MainWindow", "輔助技能："))
         self.pushButton_sup_add.setText(_translate("MainWindow", "增加技能位"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())

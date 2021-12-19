@@ -1,0 +1,17 @@
+{
+  "name": "苦痛迷宮最深處1",
+  "area": "苦痛迷宮",
+  "size": [2500, 1330],
+  "platform":[
+    {"start_x": 0, "start_y": 1134, "end_x": 2500, "end_y": 1134, "hasMob": true},
+    {"start_x": 0, "start_y": 972, "end_x": 370, "end_y": 972, "hasMob": false},
+    {"start_x": 610, "start_y": 972, "end_x": 990, "end_y": 972, "hasMob": true},
+    {"start_x": 1140, "start_y": 972, "end_x": 1360, "end_y": 972, "hasMob": false},
+    {"start_x": 1500, "start_y": 972, "end_x": 1890, "end_y": 972, "hasMob": true},
+    {"start_x": 2130, "start_y": 972, "end_x": 2500, "end_y": 972, "hasMob": false},
+    {"start_x": 160, "start_y": 654, "end_x": 2330, "end_y": 654, "hasMob": true},
+    {"start_x": 1960, "start_y": 350, "end_x": 2500, "end_y": 350, "hasMob": true},
+    {"start_x": 695, "start_y": 350, "end_x": 1805, "end_y": 350, "hasMob": true},
+    {"start_x": 0, "start_y": 350, "end_x": 540, "end_y": 350, "hasMob": false}
+  ]
+}

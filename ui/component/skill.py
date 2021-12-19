@@ -1,94 +1,32 @@
+from PyQt5 import QtGui
+from PyQt5.QtCore import QObject, pyqtSignal
+from PyQt5.QtWidgets import QWidget
+from ui.component.skill_ui import Ui_Form
 
-
-from PyQt5 import QtCore, QtGui, QtWidgets
-
-class SkillWidget(QtWidgets.QWidget):
-    __WIDTH = 40
-    __HEIGHT = 40
+class SkillWidget(QWidget):
+    __WIDTH = 32
+    __HEIGHT = 32
+    signal_click = pyqtSignal(dict)
     def __init__(self, info, parent):
-        super().__init__(parent)
-        self.__init_widget()
+        super(SkillWidget, self).__init__()
+        self.ui = Ui_Form()
+        self.ui.setupUi(self)
         self.skill = info
-        self.skill_level = 0
+        exec("self.cd = " + self.skill['cd_count'])
 
         pixmap = QtGui.QPixmap(self.skill['icon'])
         pixmap = pixmap.scaled(self.__WIDTH, self.__HEIGHT)
-        self.icon.setPixmap(pixmap)
+        self.ui.icon.setPixmap(pixmap)
 
-        self.name.setText(self.skill['name'])
-        self.level.setText(str(self.skill['level']))
+        self.ui.name.setText(self.skill['name'])
+        self.ui.level.setText(str(self.skill['level']))
+        self.ui.add.clicked.connect(self.__add_level)
+        self.ui.icon.mousePressEvent = self.icon_click
 
-        # self.setLayout(self.Form)
+    def __add_level(self):        
+        self.skill['level'] = self.skill['level'] + 1
+        self.ui.level.setText(str(self.skill['level']))
+        exec("self.cd = " + self.skill['cd_count'])
 
-    def set_skill(self, info):
-        self.skill = info
-
-        pixmap = QtGui.QPixmap(self.skill['icon'])
-        pixmap = pixmap.scaled(self.__WIDTH, self.__HEIGHT)
-        self.icon.setPixmap(pixmap)
-
-        self.name.setText(self.skill['name'])
-        self.level.setText(str(self.skill['level']))
-        pass
-
-    def __add_level(self):
-        self.skill_level = self.skill_level + 1
-        self.level.setText(str(self.skill_level))
-
-    def __init_widget(self):
-        # self.Form = QtWidgets.QWidget()
-        self.setObjectName("Form")
-        self.resize(400, 52)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.sizePolicy().hasHeightForWidth())
-        self.setSizePolicy(sizePolicy)
-        self.setMaximumSize(QtCore.QSize(16777215, 52))
-        self.gridLayout = QtWidgets.QGridLayout(self)
-        self.gridLayout.setObjectName("gridLayout")
-        self.add = QtWidgets.QPushButton(self)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(1)
-        sizePolicy.setHeightForWidth(self.add.sizePolicy().hasHeightForWidth())
-        self.add.setSizePolicy(sizePolicy)
-        self.add.setMaximumSize(QtCore.QSize(16, 16))
-        self.add.setBaseSize(QtCore.QSize(16, 16))
-        self.add.clicked.connect(self.__add_level)
-        font = QtGui.QFont()
-        font.setPointSize(7)
-        self.add.setFont(font)
-        self.add.setObjectName("add")
-        self.gridLayout.addWidget(self.add, 1, 2, 1, 1)
-        self.name = QtWidgets.QLabel(self)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(1)
-        sizePolicy.setHeightForWidth(self.name.sizePolicy().hasHeightForWidth())
-        self.name.setSizePolicy(sizePolicy)
-        self.name.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.name.setObjectName("name")
-        self.gridLayout.addWidget(self.name, 0, 1, 1, 2)
-        self.level = QtWidgets.QLabel(self)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(1)
-        sizePolicy.setHeightForWidth(self.level.sizePolicy().hasHeightForWidth())
-        self.level.setSizePolicy(sizePolicy)
-        self.level.setObjectName("level")
-        self.gridLayout.addWidget(self.level, 1, 1, 1, 1)
-        self.icon = QtWidgets.QLabel(self)
-        self.icon.setMaximumSize(QtCore.QSize(40, 40))
-        self.icon.setBaseSize(QtCore.QSize(40, 40))
-        self.icon.setObjectName("icon")
-        self.gridLayout.addWidget(self.icon, 0, 0, 2, 1)
-        self.__retranslateUi()
-    
-    def __retranslateUi(self):
-        _translate = QtCore.QCoreApplication.translate
-        self.setWindowTitle(_translate("Form", "Form"))
-        self.add.setText(_translate("Form", "↑"))
-        self.name.setText(_translate("Form", "name"))
-        self.level.setText(_translate("Form", "level"))
-        self.icon.setText(_translate("Form", "icon"))
+    def icon_click(self, event):
+        self.signal_click.emit(self.skill)

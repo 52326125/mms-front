@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\skill.ui'
+# Form implementation generated from reading ui file 'e:\mms-font\skill.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -124,13 +124,3 @@ class Ui_Form(object):
         self.name.setText(_translate("Form", "name"))
         self.level.setText(_translate("Form", "level"))
         self.add.setText(_translate("Form", "↑"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())

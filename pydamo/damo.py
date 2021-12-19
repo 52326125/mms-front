@@ -23,7 +23,7 @@ class DM:
             print('版本：', self.ver(),'，ID：',self.GetID())
         else:
             print('dm.dll注册失败!\n请检查python版本\n或手动注册dm.dll!')
-        1
+        
     def __repr__(self):
         ret = '版本： ' + str(self.ver()) + '，ID：' + str(self.GetID())
         return ret

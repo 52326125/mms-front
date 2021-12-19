@@ -27,45 +27,6 @@
     <property name="sizeConstraint">
      <enum>QLayout::SetDefaultConstraint</enum>
     </property>
-    <item row="0" column="1">
-     <widget class="QPushButton" name="pushButton_map">
-      <property name="text">
-       <string>載入地圖設定</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QScrollArea" name="scrollArea_sup">
-      <property name="minimumSize">
-       <size>
-        <width>230</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>600000</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="widgetResizable">
-       <bool>true</bool>
-      </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>374</width>
-         <height>48</height>
-        </rect>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QTextEdit" name="log"/>
-    </item>
     <item row="7" column="0">
      <widget class="QPushButton" name="pushButton_start">
       <property name="layoutDirection">
@@ -76,32 +37,162 @@
       </property>
      </widget>
     </item>
-    <item row="4" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item>
-       <widget class="QLabel" name="label_sup">
-        <property name="text">
-         <string>輔助技能：</string>
+    <item row="2" column="1" rowspan="4">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>250</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>400</width>
+        <height>250</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_skill_1">
+       <attribute name="title">
+        <string>Ⅰ</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_skill_1">
+        <property name="leftMargin">
+         <number>3</number>
         </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_sup_add">
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>40</height>
-         </size>
+        <property name="topMargin">
+         <number>0</number>
         </property>
-        <property name="text">
-         <string>增加技能位</string>
+        <property name="rightMargin">
+         <number>3</number>
         </property>
-       </widget>
-      </item>
-     </layout>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_skill_2">
+       <attribute name="title">
+        <string>Ⅱ</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_skill_2">
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_skill_3">
+       <attribute name="title">
+        <string>Ⅲ</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_skill_3">
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_skill_4">
+       <attribute name="title">
+        <string>Ⅳ</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_skill_4">
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_skill_hyper">
+       <attribute name="title">
+        <string>Hyper</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_skill_hyper">
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_skill_5">
+       <attribute name="title">
+        <string>Ⅴ</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_skill_5">
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+     </widget>
     </item>
-    <item row="2" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_atk">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
       <item>
        <widget class="QCheckBox" name="checkBox_movable">
         <property name="text">
@@ -110,70 +201,9 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label_move">
-        <property name="text">
-         <string>移動技能：</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_move">
-        <property name="minimumSize">
-         <size>
-          <width>40</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>40</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>66</width>
-          <height>87</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
-      <property name="sizeConstraint">
-       <enum>QLayout::SetDefaultConstraint</enum>
-      </property>
-      <item>
        <widget class="QLabel" name="label_atk">
         <property name="text">
          <string>主攻技能：</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_atk">
-        <property name="minimumSize">
-         <size>
-          <width>40</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>40</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string/>
         </property>
        </widget>
       </item>
@@ -203,58 +233,94 @@
       </item>
      </layout>
     </item>
-    <item row="2" column="1" rowspan="4">
-     <widget class="QTabWidget" name="tabWidget">
+    <item row="6" column="0">
+     <widget class="QTextEdit" name="log"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pushButton_map">
+      <property name="text">
+       <string>載入地圖設定</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_move">
+      <item>
+       <widget class="QLabel" name="label_move">
+        <property name="text">
+         <string>移動技能：</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_sup">
+        <property name="text">
+         <string>輔助技能：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_sup_add">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>增加技能位</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="0">
+     <widget class="QScrollArea" name="scrollArea_sup">
       <property name="minimumSize">
        <size>
-        <width>400</width>
-        <height>250</height>
+        <width>230</width>
+        <height>50</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>16777215</width>
-        <height>250</height>
+        <width>600000</width>
+        <height>60</height>
        </size>
       </property>
-      <property name="currentIndex">
-       <number>0</number>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
       </property>
-      <widget class="QWidget" name="tab_skill_1">
-       <attribute name="title">
-        <string>Ⅰ</string>
-       </attribute>
-       <layout class="QFormLayout" name="formLayout_skill_1"/>
-      </widget>
-      <widget class="QWidget" name="tab_skill_2">
-       <attribute name="title">
-        <string>Ⅱ</string>
-       </attribute>
-       <layout class="QFormLayout" name="formLayout_skill_2"/>
-      </widget>
-      <widget class="QWidget" name="tab_skill_3">
-       <attribute name="title">
-        <string>Ⅲ</string>
-       </attribute>
-       <layout class="QFormLayout" name="formLayout_skill_3"/>
-      </widget>
-      <widget class="QWidget" name="tab_skill_4">
-       <attribute name="title">
-        <string>Ⅳ</string>
-       </attribute>
-       <layout class="QFormLayout" name="formLayout_skill_4"/>
-      </widget>
-      <widget class="QWidget" name="tab_skill_hyper">
-       <attribute name="title">
-        <string>Hyper</string>
-       </attribute>
-       <layout class="QFormLayout" name="formLayout_skill_hyper"/>
-      </widget>
-      <widget class="QWidget" name="tab_skill_5">
-       <attribute name="title">
-        <string>Ⅴ</string>
-       </attribute>
-       <layout class="QFormLayout" name="formLayout_skill_6"/>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_sup">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>374</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_sup">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+       </layout>
       </widget>
      </widget>
     </item>
