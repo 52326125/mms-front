@@ -2,7 +2,7 @@ from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtGui import QKeyEvent
 from PyQt5.QtWidgets import QMessageBox
 
-class Error_handler(QMessageBox):
+class ErrorHandler(QMessageBox):
     signal_key_press = pyqtSignal(int)
     def __init__(self):
         super().__init__()

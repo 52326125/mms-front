@@ -1,5 +1,4 @@
 import win32gui
-import autoit
 import win32api
 import win32con
 import time
@@ -14,5 +13,5 @@ def getWindow(hwnd, ctx):
 win32gui.EnumWindows(getWindow, None)
 
 print(result)
-t = win32api.PostMessage(result, win32con.WM_CHAR, 0x44, 0)
+t = win32api.PostMessage(result, win32con.WM_KEYDOWN, 0x44, 0)
 print(t)

@@ -27,13 +27,59 @@
     <property name="sizeConstraint">
      <enum>QLayout::SetDefaultConstraint</enum>
     </property>
-    <item row="7" column="0">
-     <widget class="QPushButton" name="pushButton_start">
-      <property name="layoutDirection">
-       <enum>Qt::RightToLeft</enum>
+    <item row="5" column="0">
+     <widget class="QScrollArea" name="scrollArea_sup">
+      <property name="minimumSize">
+       <size>
+        <width>230</width>
+        <height>50</height>
+       </size>
       </property>
+      <property name="maximumSize">
+       <size>
+        <width>600000</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_sup">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>374</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_sup">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLabel" name="label_map">
       <property name="text">
-       <string>啟動</string>
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </item>
@@ -188,22 +234,77 @@
       </widget>
      </widget>
     </item>
-    <item row="3" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_atk">
-      <property name="sizeConstraint">
-       <enum>QLayout::SetDefaultConstraint</enum>
-      </property>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QCheckBox" name="checkBox_movable">
+       <widget class="QLabel" name="label_atk_sp">
         <property name="text">
-         <string>移動中使用</string>
+         <string>攻速：</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label_atk">
+       <widget class="QComboBox" name="comboBox_atk_sp"/>
+      </item>
+     </layout>
+    </item>
+    <item row="8" column="0">
+     <widget class="QPushButton" name="pushButton_test">
+      <property name="text">
+       <string>測試</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_move">
+      <item>
+       <widget class="QPushButton" name="pushButton_move_add">
         <property name="text">
-         <string>主攻技能：</string>
+         <string>增加技能位</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_move">
+        <property name="text">
+         <string>移動技能：</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="6" column="0">
+     <widget class="QTextEdit" name="log"/>
+    </item>
+    <item row="7" column="0">
+     <widget class="QPushButton" name="pushButton_start">
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string>啟動</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_sup">
+        <property name="text">
+         <string>輔助技能：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_sup_add">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>增加技能位</string>
         </property>
        </widget>
       </item>
@@ -233,96 +334,63 @@
       </item>
      </layout>
     </item>
-    <item row="6" column="0">
-     <widget class="QTextEdit" name="log"/>
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_atk">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <widget class="QCheckBox" name="checkBox_movable">
+        <property name="text">
+         <string>移動中使用</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_atk">
+        <property name="text">
+         <string>主攻技能：</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="pushButton_dm">
+      <property name="text">
+       <string>啟動大漠</string>
+      </property>
+     </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QPushButton" name="pushButton_map">
-      <property name="text">
-       <string>載入地圖設定</string>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <property name="spacing">
+       <number>0</number>
       </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_move">
       <item>
-       <widget class="QLabel" name="label_move">
+       <widget class="QLabel" name="label_map_select">
         <property name="text">
-         <string>移動技能：</string>
+         <string>地圖：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_map_select"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_map">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>截取小地圖</string>
         </property>
        </widget>
       </item>
      </layout>
-    </item>
-    <item row="4" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item>
-       <widget class="QLabel" name="label_sup">
-        <property name="text">
-         <string>輔助技能：</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_sup_add">
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>增加技能位</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="5" column="0">
-     <widget class="QScrollArea" name="scrollArea_sup">
-      <property name="minimumSize">
-       <size>
-        <width>230</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>600000</width>
-        <height>60</height>
-       </size>
-      </property>
-      <property name="horizontalScrollBarPolicy">
-       <enum>Qt::ScrollBarAlwaysOn</enum>
-      </property>
-      <property name="widgetResizable">
-       <bool>true</bool>
-      </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents_sup">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>374</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_sup">
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="rightMargin">
-         <number>0</number>
-        </property>
-        <property name="bottomMargin">
-         <number>0</number>
-        </property>
-       </layout>
-      </widget>
-     </widget>
     </item>
    </layout>
   </widget>

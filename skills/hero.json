@@ -1,36 +1,37 @@
 {
   "hero":{
     "1": [
-      {"name": "劍氣縱橫", "icon": "./skills/hero/1/1.jpg", "level": 0, "max_level": 20, "cd_count": "0"},
-      {"name": "戰鬥置換", "icon": "./skills/hero/1/2.jpg", "level": 0, "max_level": 10, "cd_count": "0"}
+      {"name": "劍氣縱橫", "icon": "./skills/hero/1/1.jpg", "level": 0, "max_level": 20, "cd_count": 0, "type": "atk", "key_type": "press", "space": 1},
+      {"name": "戰鬥置換", "icon": "./skills/hero/1/2.jpg", "level": 0, "max_level": 10, "cd_count": 0, "type": "move", "key_type": "press", "range": 420, "space": 0, "delay": 0, "diraction": "x"}
     ],
     "2": [
-      {"name": "狂瀾利刃", "icon": "./skills/hero/2/1.jpg", "level": 0, "max_level": 10, "cd_count": "0"},
-      {"name": "極速武器", "icon": "./skills/hero/2/2.jpg", "level": 0, "max_level": 10, "cd_count": "0"},
-      {"name": "激勵", "icon": "./skills/hero/2/3.jpg", "level": 0, "max_level": 20, "cd_count": "0"},
-      {"name": "雙連斬", "icon": "./skills/hero/2/4.jpg", "level": 0, "max_level": 20, "cd_count": "0"},
-      {"name": "鬥氣集中", "icon": "./skills/hero/2/5.jpg", "level": 0, "max_level": 1, "cd_count": "0"}
+      {"name": "狂瀾利刃", "icon": "./skills/hero/2/1.jpg", "level": 0, "max_level": 10, "cd_count": 0, "type": "atk", "key_type": "press", "space": 1},
+      {"name": "極速武器", "icon": "./skills/hero/2/2.jpg", "level": 0, "max_level": 10, "cd_count": 0, "type": "buff", "key_type": "press", "space": 1},
+      {"name": "激勵", "icon": "./skills/hero/2/3.jpg", "level": 0, "max_level": 20, "cd_count": 0, "type": "buff", "key_type": "press", "space": 1},
+      {"name": "雙連斬", "icon": "./skills/hero/2/4.jpg", "level": 0, "max_level": 20, "cd_count": 0, "type": "atk", "key_type": "press", "space": 1},
+      {"name": "鬥氣集中", "icon": "./skills/hero/2/5.jpg", "level": 0, "max_level": 1, "cd_count": 0, "type": "buff", "key_type": "press", "space": 1}
     ],
     "3": [
       
     ],
     "4": [
-      {"name": "狂暴攻擊", "icon": "./skills/hero/4/1.jpg", "level": 0, "max_level": 30, "cd_count": "0"},
-      {"name": "楓葉祝福", "icon": "./skills/hero/4/2.jpg", "level": 0, "max_level": 30, "cd_count": "0"}
+      {"name": "狂暴攻擊", "icon": "./skills/hero/4/1.jpg", "level": 0, "max_level": 30, "cd_count": 0, "delay": 780, "type": "atk", "key_type": "press", "range": 265, "space": 1},
+      {"name": "楓葉祝福", "icon": "./skills/hero/4/2.jpg", "level": 0, "max_level": 30, "cd_count": 0, "type": "buff", "key_type": "press", "space": 1}
     ],
     "5": [
-      {"name": "劍之幻象", "icon": "./skills/hero/5/1.jpg", "level": 0, "max_level": 30, "cd_count": "30"},
-      {"name": "鬥氣本能", "icon": "./skills/hero/5/2.jpg", "level": 0, "max_level": 30, "cd_count": "240"},
-      {"name": "鋼鐵之軀", "icon": "./skills/hero/5/3.jpg", "level": 0, "max_level": 30, "cd_count": "240"},
-      {"name": "空間斬", "icon": "./skills/hero/5/4.jpg", "level": 0, "max_level": 30, "cd_count": "20"},
-      {"name": "燃燒靈魂之劍", "icon": "./skills/hero/5/5.jpg", "level": 0, "max_level": 30, "cd_count": "120"},
-      {"name": "幻靈武具", "icon": "./skills/hero/5/6.jpg", "level": 0, "max_level": 30, "cd_count": "180"},
-      {"name": "突擊之盾", "icon": "./skills/hero/5/7.jpg", "level": 0, "max_level": 15, "cd_count": "15"}
+      {"name": "劍之幻象", "icon": "./skills/hero/5/1.jpg", "level": 0, "max_level": 30, "cd_count": 30, "type": "buff", "key_type": "press", "space": 1},
+      {"name": "鬥氣本能", "icon": "./skills/hero/5/2.jpg", "level": 0, "max_level": 30, "cd_count": 240, "type": "buff", "key_type": "press", "space": 2},
+      {"name": "鋼鐵之軀", "icon": "./skills/hero/5/3.jpg", "level": 0, "max_level": 30, "cd_count": 240, "type": "buff", "key_type": "press", "space": 2},
+      {"name": "空間斬", "icon": "./skills/hero/5/4.jpg", "level": 0, "max_level": 30, "cd_count": 20, "type": "buff", "key_type": "press", "space": 1},
+      {"name": "燃燒靈魂之劍", "icon": "./skills/hero/5/5.jpg", "level": 0, "max_level": 30, "cd_count": 120, "delay": 810, "type": "buff", "key_type": "press", "space": 2},
+      {"name": "幻靈武具", "icon": "./skills/hero/5/6.jpg", "level": 0, "max_level": 30, "cd_count": 180, "type": "buff", "key_type": "press", "space": 2},
+      {"name": "突擊之盾", "icon": "./skills/hero/5/7.jpg", "level": 0, "max_level": 15, "cd_count": 15, "type": "buff", "key_type": "press", "space": 2},
+      {"name": "連接繩索", "icon": "./skills/hero/5/8.jpg", "level": 0, "max_level": 10, "cd_count": 3, "type": "move", "key_type": "press", "range": 2000, "space": 1, "delay": 360, "diraction": "y"}
     ],
     "hyper": [
-      {"name": "劍士意念", "icon": "./skills/hero/hyper/1.jpg", "level": 0, "max_level": 1, "cd_count": "150"},
-      {"name": "憤怒爆發", "icon": "./skills/hero/hyper/2.jpg", "level": 0, "max_level": 1, "cd_count": "10"},
-      {"name": "傳說冒險", "icon": "./skills/hero/hyper/3.jpg", "level": 0, "max_level": 1, "cd_count": "120"}
+      {"name": "劍士意念", "icon": "./skills/hero/hyper/1.jpg", "level": 0, "max_level": 1, "cd_count": 150, "delay": 900, "type": "buff", "key_type": "press", "space": 1},
+      {"name": "憤怒爆發", "icon": "./skills/hero/hyper/2.jpg", "level": 0, "max_level": 1, "cd_count": 10, "delay": 990, "type": "atk", "key_type": "press", "space": 2},
+      {"name": "傳說冒險", "icon": "./skills/hero/hyper/3.jpg", "level": 0, "max_level": 1, "cd_count": 120, "type": "buff", "key_type": "press", "space": 1}
     ]
   }
 }

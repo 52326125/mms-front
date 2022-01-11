@@ -12,7 +12,7 @@ class SkillWidget(QWidget):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.skill = info
-        exec("self.cd = " + self.skill['cd_count'])
+        exec("self.cd = " + f"{self.skill['cd_count']}")
 
         pixmap = QtGui.QPixmap(self.skill['icon'])
         pixmap = pixmap.scaled(self.__WIDTH, self.__HEIGHT)
